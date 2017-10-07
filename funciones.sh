@@ -7,6 +7,7 @@ function limpiarPantalla() {
 
 function cantidadProcesos() {
 	#wc Word Count / -l numero de lineas
+	echo -e "cantidad de procesos corriendo actualmente:"	
 	ps xa | wc -l
 }
 
@@ -16,7 +17,7 @@ function suma() {
 
 #los parametros recibidos por funciones son iguales que los parametros recibidos por el script
 function recibeParametro() {
-	echo $1
+	echo "parametro recibido:" $1
 }
 
 #llamar funciones (En este caso no pasamos parametros)
