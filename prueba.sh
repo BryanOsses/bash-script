@@ -28,7 +28,7 @@ else
 	if [ -f $fichero ]
 	then
 		clear
-		palabras=$(cat perros | awk -F "$separador" '{for(i=1; i<=NF; i++) print $i "(palabra " i ")"}')
+		palabras=$(cat $fichero | awk -F "$separador" '{for(i=1; i<=NF; i++) print $i "(palabra " i ")"}')
 		cantidad=$(awk -F "$separador" '{print NF}' $fichero)
 
 		echo -e Cantidad de palabras en ${cyan}$fichero ${noc}utilizando como separador ${magenta}$separador  
